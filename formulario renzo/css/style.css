@@ -1,0 +1,207 @@
+/*Custome properties-variables*/
+
+:root {
+    --primario: #1d4ce8;
+    --secundario: #32f332;
+    --gris: #3B3B3B;
+    --blanco: #ffffff;
+    --negro: #000000; /*#1F1E1E*/
+    --grisClaro: #e1e1e1;
+
+    --separacion: 5rem;
+
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Lato', sans-serif;
+
+}
+
+/*RESET: REMS y Box Sizing*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem; /*quiero que las letras de todos los parrafos midan 1.6rem*//*le tengo que poner 1.6rem al tamaño de fuente de todo el body para que la base sean 16px como si fuera el valor por defecto*/
+    line-height: 1.5; /*interlineado de los parrafos*/
+}
+
+/*GLOBALES*/
+
+body {
+    background-color: #e0e0e0;
+}
+
+.contenedor {
+    max-width: 120rem; /*El ancho va a hasta 1200px puede ser menos, no mas*/
+    width: 90%; /*Va a tomar el 90% del tamaño del contenedor, en este caso el90% del contenedor, hasta los 1200px*/
+    margin: 0 auto; /*Para centrar horizontalmente*/
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    font-family: var(--fuenteSecundaria);
+    margin: calc(var(--separacion)/2) 0; /*le doy margin de 2.5rem porque divide la separacion que es 5 entre 2, le digo que sea un margin 2.5 arriba y abajo y 0 a los costados*/
+    /*margin: 2.5 0;  la funcion calc hace lo mismoque esto*/
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+    display: block; /*para evitar la separacion en el borde inferior*/
+    height: auto; /*para que las imagenes no pierdan proporcion en dospositivos pequeños(que la imagen se estire en pqueños dispositivos), le agrega la misma altura segun el ancho del contenedor*/
+}
+
+/*UTILIDADES*/
+ 
+.text-center { /*centra el contenido dentro del div de forma horixzontal*/
+    text-align: center;
+}
+
+.bg-red {
+    background-color: red;
+}
+    
+
+.text-white {
+    color: #ffffff;
+}
+
+.padding-2 {
+    padding: 0.5rem;
+}
+
+/*FORMULARIO HTML*/
+
+/*ESTILOS LABEL*/
+
+.formulario {
+  background-color: white;
+  width: 70rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+}
+.formulario__campo {
+    padding-bottom: 1.5rem;
+}
+.formulario__campo label {
+    font-size: 1.8rem; /* Tamaño de la fuente */
+    color: var(--gris); /* Color del texto */
+    font-weight: 700;
+    display: block; /* Para que ocupe toda la línea */
+    margin-bottom: 0.5rem; /* Espaciado debajo del label */
+}
+
+/*ESTILOS IMPUTS*/
+
+.formulario__campo input, textarea {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    padding: 1rem; /* Espaciado interno */
+    font-size: 1.6rem; /* Tamaño de la fuente */
+    border: 1px solid var(--grisClaro); /* Borde del input */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    background-color: var(--blanco); /* Color de fondo */
+    color: var(--gris); /* Color del texto */
+}
+
+textarea {
+    max-width: 100%; /* Evita que se expanda más allá del contenedor */
+    resize: vertical; /* Permite solo el redimensionamiento vertical */
+}
+
+.formulario__campo input:focus {
+    border-color: var(--primario); /* Cambia el color del borde al hacer foco */
+    outline: none; /* Elimina el borde por defecto de focus */
+    box-shadow: 0 0 5px rgba(29, 32, 232, 0.5); /* Sombra para indicar foco */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+}
+
+/*Estilos botones*/
+
+.formulario__botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario__botones button {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    color: var(--blanco); /* Texto blanco */
+    border: none; /* Eliminar bordes */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    transition: background-color 0.3s ease-in-out; /* Transición suave */
+}
+
+.formulario__botones .formulario__botones-enviar {
+    background-color: #1cbb1c;
+    margin-right: 1rem;
+}
+
+/*
+.formulario__botones-enviar {
+    opacity: 0.5 ;
+   /* background-color: #447c5f; /* Color más apagado para el botón deshabilitado */
+    /*cursor: not-allowed; /* Indica que el botón no es clickeable 
+    
+}
+*/
+
+
+.opacidad-50 {
+    opacity: 0.5;
+}
+
+.formulario__botones .formulario__botones-resetear {
+    background-color: #000000;
+}
+
+
+/*SPINNER*/
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.spinner__hidden {
+    visibility: hidden;
+}
+
+/*Estilos alerta exito*/
+
+.alerta__exito {
+    background-color: #1cbb1c;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}

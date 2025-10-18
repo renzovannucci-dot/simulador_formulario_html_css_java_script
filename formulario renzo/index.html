@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/spinner.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1 class="text-center">FORMULARIO</h1>
+        <div class="contenedor__principal">
+            <form id="formulario" class="formulario">
+                <div class="formulario__campo">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" placeholder="Email, destino ej: mail@gmail.com">
+                </div>
+    
+                <div class="formulario__campo">
+                    <label for="asunto">Asunto:</label>
+                    <input id="asunto" type="text" name="asunto" placeholder="asunto email">
+                      
+                </div>
+    
+                <div class="formulario__campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" type="text" name="mensaje" placeholder="Mensaje email">  </textarea>
+                </div>
+    
+                <div id="botones" class="formulario__botones">
+                    <button id="boton__enviar" class="formulario__botones-enviar opacidad-50" type="submit" disabled>Enviar
+    
+                    </button> 
+                    
+                    <button id="boton__resetear" class="formulario__botones-resetear" type="reset">Resetear
+    
+                    </button>
+                </div>
+            </form>
+
+            <div id="spinner" class="spinner__hidden">
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </div>
+    
+          
+          
+        </div>
+    </div>
+       
+    <script src="js/app.js"></script>
+</body>
+</html>
